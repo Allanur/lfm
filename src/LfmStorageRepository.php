@@ -26,13 +26,14 @@ class LfmStorageRepository
 
     public function rootPath()
     {
-        $adapter = $this->disk->getDriver()->getAdapter();
+//         $adapter = $this->disk->getDriver()->getAdapter();
 
-        if ($adapter instanceof CachedAdapter) {
-            $adapter = $adapter->getAdapter();
-        }
+//         if ($adapter instanceof CachedAdapter) {
+//             $adapter = $adapter->getAdapter();
+//         }
 
-        return $adapter->getPathPrefix();
+//         return $adapter->getPathPrefix();
+        return $this->path();
     }
 
     public function move($new_lfm_path)
